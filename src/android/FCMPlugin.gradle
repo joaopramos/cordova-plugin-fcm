@@ -5,7 +5,12 @@ buildscript {
         }
     dependencies {
         classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.google.gms:google-services:+'
+	/** 
+	 *  classpath 'com.google.gms:google-services:+' produces a build error requiring version 9.0.0
+	 *  @see: https://firebase.google.com/docs/android/setup#add_the_sdk for setup config
+	*/
+        classpath 'com.google.gms:google-services:3.0.0' 
+
     }
 }
 // apply plugin: 'com.google.gms.google-services'
